@@ -1,0 +1,82 @@
+.stories-page {
+  padding: 60px 0 100px;
+}
+
+.stories-label {
+  color: var(--color-blue);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.stories-heading {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 2.4rem;
+  color: var(--color-black);
+  margin-bottom: 40px;
+}
+
+.stories-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-card {
+  padding: 36px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.story-card:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.story-number {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  color: var(--color-border);
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.story-category {
+  color: var(--color-blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.story-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.story-subtitle {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-gray);
+  margin-bottom: 14px;
+}
+
+.story-excerpt {
+  color: var(--color-gray);
+  font-size: 1rem;
+  max-width: 640px;
+  margin-bottom: 16px;
+}
+
+.story-link {
+  color: var(--color-blue);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.story-link:hover {
+  color: var(--color-blue-dark);
+}
