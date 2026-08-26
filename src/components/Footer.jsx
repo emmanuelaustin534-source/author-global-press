@@ -30,19 +30,6 @@ function Footer() {
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/terms">Terms of Service</Link>
         </div>
-
-        <div className="footer-links">
-          <h3>Follow</h3>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            Facebook
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            Twitter
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            Instagram
-          </a>
-        </div>
       </div>
 
       <div className="footer-bottom">

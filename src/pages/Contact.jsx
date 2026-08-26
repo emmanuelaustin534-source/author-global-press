@@ -39,18 +39,6 @@ function Contact() {
             Fill out the form and our editorial team will reach out to get your
             feature started.
           </p>
-
-          <div className="contact-socials">
-            <a href="#" aria-label="Facebook">
-              Facebook
-            </a>
-            <a href="#" aria-label="Twitter">
-              Twitter
-            </a>
-            <a href="#" aria-label="Instagram">
-              Instagram
-            </a>
-          </div>
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
