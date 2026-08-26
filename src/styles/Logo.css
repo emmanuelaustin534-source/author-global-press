@@ -1,0 +1,24 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: var(--color-black);
+}
+
+@media (max-width: 420px) {
+  .logo-text {
+    font-size: 1.1rem;
+  }
+}

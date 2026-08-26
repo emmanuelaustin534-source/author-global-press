@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 import "../styles/Navbar.css";
 
 function Navbar() {
@@ -8,9 +9,7 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="container navbar-inner">
-        <Link to="/" className="navbar-logo">
-          Author Global Press
-        </Link>
+        <Logo />
 
         <button
           className="navbar-toggle"
