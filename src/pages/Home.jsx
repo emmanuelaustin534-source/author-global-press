@@ -1,5 +1,10 @@
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/Home.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const reasons = [
   {
@@ -34,7 +39,62 @@ const reasons = [
   },
 ];
 
+const stats = [
+  { value: 120, suffix: "+", label: "Authors Featured" },
+  { value: 140, suffix: "+", label: "Articles Published" },
+  { value: 18, suffix: "", label: "Countries Reached" },
+  { value: 6, suffix: "", label: "Media Platforms" },
+];
+
 function Home() {
+  const statRefs = useRef([]);
+  const cardRefs = useRef([]);
+
+  useEffect(() => {
+    // Count-up animation for stats
+    statRefs.current.forEach((el, i) => {
+      if (!el) return;
+      const target = stats[i].value;
+      const counter = { val: 0 };
+
+      gsap.to(counter, {
+        val: target,
+        duration: 1.6,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",
+          once: true,
+        },
+        onUpdate: () => {
+          el.textContent = Math.floor(counter.val) + stats[i].suffix;
+        },
+      });
+    });
+
+    // Fade/slide-in animation for "Why Us" cards
+    gsap.fromTo(
+      cardRefs.current,
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.12,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".why-us-grid",
+          start: "top 80%",
+          once: true,
+        },
+      },
+    );
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <div>
       <section className="hero">
@@ -66,8 +126,12 @@ function Home() {
           </h2>
 
           <div className="why-us-grid">
-            {reasons.map((reason) => (
-              <div className="why-us-card" key={reason.title}>
+            {reasons.map((reason, i) => (
+              <div
+                className="why-us-card"
+                key={reason.title}
+                ref={(el) => (cardRefs.current[i] = el)}
+              >
                 <h3>{reason.title}</h3>
                 <p>{reason.description}</p>
               </div>
@@ -78,22 +142,17 @@ function Home() {
 
       <section className="stats">
         <div className="container stats-grid">
-          <div className="stat-item">
-            <p className="stat-number">120+</p>
-            <p className="stat-label">Authors Featured</p>
-          </div>
-          <div className="stat-item">
-            <p className="stat-number">140+</p>
-            <p className="stat-label">Articles Published</p>
-          </div>
-          <div className="stat-item">
-            <p className="stat-number">18</p>
-            <p className="stat-label">Countries Reached</p>
-          </div>
-          <div className="stat-item">
-            <p className="stat-number">6</p>
-            <p className="stat-label">Media Platforms</p>
-          </div>
+          {stats.map((stat, i) => (
+            <div className="stat-item" key={stat.label}>
+              <p
+                className="stat-number"
+                ref={(el) => (statRefs.current[i] = el)}
+              >
+                0{stat.suffix}
+              </p>
+              <p className="stat-label">{stat.label}</p>
+            </div>
+          ))}
         </div>
       </section>
 
