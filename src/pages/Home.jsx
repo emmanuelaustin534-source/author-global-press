@@ -45,10 +45,31 @@ const stats = [
   { value: 18, suffix: "", label: "Countries Reached" },
   { value: 6, suffix: "", label: "Media Platforms" },
 ];
+const testimonials = [
+  {
+    quote:
+      "Working with Author Global Press gave my book a level of credibility I couldn't have built on my own. The article read like something from a real publication, not a paid promotion.",
+    name: "Elena Marsh",
+    role: "Debut Novelist",
+  },
+  {
+    quote:
+      "The interview felt like a real conversation, not an interrogation. What came back was genuinely well written, and it's still bringing new readers to my site months later.",
+    name: "Marcus Webb",
+    role: "Memoir Author",
+  },
+  {
+    quote:
+      "I was nervous about being featured publicly, but the team made the whole process easy and respectful. I got to review everything before it went live.",
+    name: "Priya Anand",
+    role: "Nonfiction Author",
+  },
+];
 
 function Home() {
   const statRefs = useRef([]);
   const cardRefs = useRef([]);
+  const testimonialRefs = useRef([]);
 
   useEffect(() => {
     // Count-up animation for stats
@@ -84,6 +105,23 @@ function Home() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".why-us-grid",
+          start: "top 80%",
+          once: true,
+        },
+      },
+    );
+    // Fade/slide-in animation for testimonial cards
+    gsap.fromTo(
+      testimonialRefs.current,
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        stagger: 0.12,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: ".testimonials-grid",
           start: "top 80%",
           once: true,
         },
@@ -161,10 +199,33 @@ function Home() {
           <p className="logos-label">As Featured Through</p>
           <div className="logos-row">
             <span>USA Wire</span>
-            <span>UK Wire</span>
-            <span>Global Press Wire</span>
+            <span>AP News</span>
+            <span>Biz Weekly</span>
             <span>Digital Journal</span>
-            <span>Market Watch Wire</span>
+            <span>Benzinga</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="testimonials">
+        <div className="container">
+          <p className="testimonials-label">What Authors Say</p>
+          <h2 className="testimonials-heading">
+            Real Stories, Real Confidence
+          </h2>
+
+          <div className="testimonials-grid">
+            {testimonials.map((t, i) => (
+              <div
+                className="testimonial-card"
+                key={t.name}
+                ref={(el) => (testimonialRefs.current[i] = el)}
+              >
+                <p className="testimonial-quote">"{t.quote}"</p>
+                <p className="testimonial-name">{t.name}</p>
+                <p className="testimonial-role">{t.role}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
