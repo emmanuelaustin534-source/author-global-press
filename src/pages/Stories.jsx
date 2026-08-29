@@ -62,6 +62,16 @@ const stories = [
     link: "https://trans4mind.com/counterpoint/index-creativity-career/from-boardrooms-to-breakthroughs-julianna-newlandrsquos-humorous-blueprint-for-navigating-the-modern-workplace.html",
     source: "Trans4mind",
   },
+  {
+    number: "07",
+    category: "Poetry",
+    title: "The Poet Searching for the Sacred",
+    subtitle: "Alan Altany on Faith, Struggle, and Beauty",
+    excerpt:
+      "A scholar and poet turns decades of addiction, anxiety, recovery, and spiritual searching into a Christian poetry series exploring suffering, grace, and the presence of the sacred.",
+    link: "https://usawire.com/alan-altany-the-poet-searching-for-the-sacred-through-faith-struggle-beauty-of-life/",
+    source: "USA Wire",
+  },
 ];
 
 function Stories() {
