@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/Home.css";
@@ -45,6 +46,7 @@ const stats = [
   { value: 18, suffix: "", label: "Countries Reached" },
   { value: 6, suffix: "", label: "Media Platforms" },
 ];
+
 const testimonials = [
   {
     quote:
@@ -66,10 +68,42 @@ const testimonials = [
   },
 ];
 
+const faqs = [
+  {
+    q: "What is Author Global Press?",
+    a: "We are an editorial feature service for authors. We interview you about your book and your journey, write a professional article about your story, and publish it through recognized media platforms.",
+  },
+  {
+    q: "How does the interview work?",
+    a: "You choose one of two formats. A Live Interview is a short recorded conversation about your book and your story. A Written Interview is a set of simple questions you answer at your own pace.",
+  },
+  {
+    q: "Will I get to approve the article before it is published?",
+    a: "Yes. Your feature is sent to you for review and approval first, and nothing goes live until you are happy with it.",
+  },
+  {
+    q: "Where will my feature be published?",
+    a: "Finished features can be published on respected platforms such as USA Wire and Digital Journal, giving your story a lasting and searchable online presence.",
+  },
+  {
+    q: "Can I share my published feature?",
+    a: "Absolutely. Once it is live, you are welcome to share the link on your website, social media, author bio, newsletter, or anywhere else you promote your work.",
+  },
+  {
+    q: "Who can apply to be featured?",
+    a: "Any author with a story to tell, whether you are independent, self-published, or traditionally published, and whether you write fiction, nonfiction, memoir, poetry, or business books.",
+  },
+  {
+    q: "How do I get started?",
+    a: "Head to the Contact page and fill out the short application form. Our editorial team will reach out to you to talk through the next steps.",
+  },
+];
+
 function Home() {
   const statRefs = useRef([]);
   const cardRefs = useRef([]);
   const testimonialRefs = useRef([]);
+  const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
     // Count-up animation for stats
@@ -110,6 +144,7 @@ function Home() {
         },
       },
     );
+
     // Fade/slide-in animation for testimonial cards
     gsap.fromTo(
       testimonialRefs.current,
@@ -199,10 +234,10 @@ function Home() {
           <p className="logos-label">As Featured Through</p>
           <div className="logos-row">
             <span>USA Wire</span>
-            <span>AP News</span>
-            <span>Biz Weekly</span>
+            <span>Ap News</span>
+            <span>Global Press Wire</span>
             <span>Digital Journal</span>
-            <span>Benzinga</span>
+            <span>Market Watch Wire</span>
           </div>
         </div>
       </section>
@@ -224,6 +259,45 @@ function Home() {
                 <p className="testimonial-quote">"{t.quote}"</p>
                 <p className="testimonial-name">{t.name}</p>
                 <p className="testimonial-role">{t.role}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="faq">
+        <div className="container faq-inner">
+          <p className="faq-label">FAQ</p>
+          <h2 className="faq-heading">Questions Authors Often Ask</h2>
+
+          <div className="faq-list">
+            {faqs.map((faq, i) => (
+              <div
+                className={`faq-item ${openFaq === i ? "open" : ""}`}
+                key={faq.q}
+              >
+                <button
+                  className="faq-question"
+                  onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  aria-expanded={openFaq === i}
+                >
+                  <span>{faq.q}</span>
+                  <span className="faq-icon">{openFaq === i ? "−" : "+"}</span>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {openFaq === i && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      style={{ overflow: "hidden" }}
+                    >
+                      <p className="faq-answer">{faq.a}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>

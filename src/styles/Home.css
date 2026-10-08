@@ -273,3 +273,117 @@
     grid-template-columns: 1fr;
   }
 }
+/* White primary button inside the blue hero */
+.hero .btn-primary {
+  background-color: var(--color-white);
+  color: var(--color-blue);
+}
+
+.hero .btn-primary:hover {
+  background-color: #e8eeff;
+  color: var(--color-blue-dark);
+}
+
+/* FAQ section */
+.faq {
+  padding: 40px 0 100px;
+}
+
+.faq-inner {
+  max-width: 800px;
+  text-align: center;
+}
+
+.faq-label {
+  color: var(--color-blue);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.faq-heading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-black);
+  margin-bottom: 40px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.faq-item {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background-color: var(--color-white);
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.faq-item.open {
+  border-color: var(--color-blue);
+  box-shadow: 0 6px 24px rgba(41, 82, 227, 0.08);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: var(--color-black);
+  text-align: left;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-offwhite);
+  color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.faq-item.open .faq-icon {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.faq-answer {
+  padding: 0 24px 22px;
+  color: var(--color-gray);
+  font-size: 0.98rem;
+}
+
+@media (max-width: 700px) {
+  .faq-heading {
+    font-size: 1.6rem;
+  }
+
+  .faq-question {
+    font-size: 0.98rem;
+    padding: 18px 18px;
+  }
+
+  .faq-answer {
+    padding: 0 18px 20px;
+  }
+}

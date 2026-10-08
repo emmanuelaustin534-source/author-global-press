@@ -72,6 +72,16 @@ const stories = [
     link: "https://usawire.com/alan-altany-the-poet-searching-for-the-sacred-through-faith-struggle-beauty-of-life/",
     source: "USA Wire",
   },
+  {
+    number: "08",
+    category: "Self-Help",
+    title: "A New Way to Understand Human Behavior",
+    subtitle: "Jim Marshall's Septemics",
+    excerpt:
+      "A polymathic thinker and Human Development Engineer distills decades of study into a framework of scales and levels for understanding behavior, relationships, and personal growth.",
+    link: "https://usawire.com/septemics-personal-growth-guide/",
+    source: "USA Wire",
+  },
 ];
 
 function Stories() {
