@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     q: "Where will my feature be published?",
-    a: "Finished features can be published on respected platforms such as USA Wire and Digital Journal, giving your story a lasting and searchable online presence.",
+    a: "Finished features can be published on respected platforms such as USA Wire, Big news Network, Digital Journal and more highend premium sites, giving your story a lasting and searchable online presence.",
   },
   {
     q: "Can I share my published feature?",
