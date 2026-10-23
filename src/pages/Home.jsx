@@ -235,7 +235,7 @@ function Home() {
           <div className="logos-row">
             <span>USA Wire</span>
             <span>Ap News</span>
-            <span>Global Press Wire</span>
+            <span>Big News Network</span>
             <span>Digital Journal</span>
             <span>Market Watch Wire</span>
           </div>
