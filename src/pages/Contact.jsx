@@ -18,17 +18,20 @@ const genres = [
 
 const nextSteps = [
   {
-    title: "Submit your application",
+    title: "Request your free draft",
     text: "Tell us about you and your book.",
   },
   {
-    title: "We reach out",
-    text: "Our editorial team contacts you to plan the interview.",
+    title: "We write your article",
+    text: "Our editorial team prepares your draft at no cost.",
   },
-  { title: "Interview", text: "Choose a Live or Written Interview." },
   {
-    title: "Review and publish",
-    text: "You approve your feature before it goes live.",
+    title: "Review and choose a package",
+    text: "Approve the draft, then pick the package that fits.",
+  },
+  {
+    title: "Go live",
+    text: "We syndicate your feature and send you the live links.",
   },
 ];
 
@@ -38,7 +41,6 @@ const initialValues = {
   book_title: "",
   book_link: "",
   genre: "",
-  format: "Live Interview",
   message: "",
   consent: false,
   _gotcha: "",
@@ -80,7 +82,7 @@ function Contact() {
 
     if (!values.message.trim() || values.message.trim().length < 10) {
       newErrors.message =
-        "Please tell us a little about your story (at least 10 characters).";
+        "Please tell us a little about your book (at least 10 characters).";
     }
 
     if (!values.consent) {
@@ -115,13 +117,12 @@ function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          _subject: "New Get Featured application - Author Global Press",
+          _subject: "New free draft request - Author Global Press",
           name: values.name,
           email: values.email,
           book_title: values.book_title,
           book_link: values.book_link,
           genre: values.genre,
-          interview_format: values.format,
           message: values.message,
         }),
       });
@@ -145,8 +146,8 @@ function Contact() {
           <p className="contact-label">Get In Touch</p>
           <h1 className="contact-heading">Get Featured</h1>
           <p className="contact-subheading">
-            Tell us about your book and your story. Our editorial team will
-            reach out to take it from there.
+            Tell us about your book. Our editorial team will write your free
+            draft and send it to you to review.
           </p>
 
           <ol className="contact-steps">
@@ -162,7 +163,7 @@ function Contact() {
           </ol>
 
           <p className="contact-note">
-            Your details are only used to respond to your application.
+            Your details are only used to respond to your request.
           </p>
         </aside>
 
@@ -189,10 +190,10 @@ function Contact() {
                 >
                   ✓
                 </motion.div>
-                <h2>Application Received</h2>
+                <h2>Request Received</h2>
                 <p>
-                  Thank you! Our editorial team will review your details and be
-                  in touch soon.
+                  Thank you! Our editorial team will start on your free draft
+                  and be in touch soon.
                 </p>
                 <button
                   type="button"
@@ -212,7 +213,7 @@ function Contact() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <h2 className="form-title">Author Application</h2>
+                <h2 className="form-title">Request Your Free Draft</h2>
 
                 <div className="form-row">
                   <div className={`field ${errors.name ? "has-error" : ""}`}>
@@ -294,41 +295,8 @@ function Contact() {
                   </select>
                 </div>
 
-                <div className="field">
-                  <label>Preferred Interview Format</label>
-                  <div className="format-options">
-                    <label className="format-option">
-                      <input
-                        type="radio"
-                        name="format"
-                        value="Live Interview"
-                        checked={values.format === "Live Interview"}
-                        onChange={handleChange}
-                      />
-                      <span className="format-card">
-                        <strong>Live Interview</strong>
-                        <small>A short recorded conversation</small>
-                      </span>
-                    </label>
-
-                    <label className="format-option">
-                      <input
-                        type="radio"
-                        name="format"
-                        value="Written Interview"
-                        checked={values.format === "Written Interview"}
-                        onChange={handleChange}
-                      />
-                      <span className="format-card">
-                        <strong>Written Interview</strong>
-                        <small>Answer questions at your pace</small>
-                      </span>
-                    </label>
-                  </div>
-                </div>
-
                 <div className={`field ${errors.message ? "has-error" : ""}`}>
-                  <label htmlFor="message">Tell Us About Your Story *</label>
+                  <label htmlFor="message">Tell Us About Your Book *</label>
                   <textarea
                     id="message"
                     name="message"
@@ -364,7 +332,7 @@ function Contact() {
                       checked={values.consent}
                       onChange={handleChange}
                     />
-                    <span>I agree to be contacted about my application.</span>
+                    <span>I agree to be contacted about my request.</span>
                   </label>
                   {errors.consent && (
                     <span className="field-error">{errors.consent}</span>
@@ -376,7 +344,7 @@ function Contact() {
                   className="btn btn-primary submit-btn"
                   disabled={status === "sending"}
                 >
-                  {status === "sending" ? "Sending..." : "Submit Application →"}
+                  {status === "sending" ? "Sending..." : "Request Free Draft →"}
                 </button>
 
                 {status === "error" && (

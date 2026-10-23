@@ -9,9 +9,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const reasons = [
   {
-    title: "Professional Interviews",
+    title: "Free Draft First",
     description:
-      "A real conversation with an editorial team, not a form to fill out alone.",
+      "Read your finished article before you pay or decide anything.",
   },
   {
     title: "Editorial Storytelling",
@@ -50,13 +50,13 @@ const stats = [
 const testimonials = [
   {
     quote:
-      "Working with Author Global Press gave my book a level of credibility I couldn't have built on my own. The article read like something from a real publication, not a paid promotion.",
+      "Working with Author Global Press gave my book a level of credibility I couldn't have built on my own. The article read like a genuine feature from a real publication.",
     name: "Elena Marsh",
     role: "Debut Novelist",
   },
   {
     quote:
-      "The interview felt like a real conversation, not an interrogation. What came back was genuinely well written, and it's still bringing new readers to my site months later.",
+      "I didn't have to do a thing. The draft that landed in my inbox was genuinely well written, and it's still bringing new readers to my site months later.",
     name: "Marcus Webb",
     role: "Memoir Author",
   },
@@ -71,11 +71,11 @@ const testimonials = [
 const faqs = [
   {
     q: "What is Author Global Press?",
-    a: "We are an editorial feature service for authors. We interview you about your book and your journey, write a professional article about your story, and publish it through recognized media platforms.",
+    a: "We are an editorial feature service for authors. We write a professional article about your book and your story, then publish it through recognized media platforms.",
   },
   {
-    q: "How does the interview work?",
-    a: "You choose one of two formats. A Live Interview is a short recorded conversation about your book and your story. A Written Interview is a set of simple questions you answer at your own pace.",
+    q: "How does the free draft work?",
+    a: "Our editorial team writes a custom feature article about your book at no cost, with no effort required from you. We send you the full draft to read and approve, and only then do you choose a package.",
   },
   {
     q: "Will I get to approve the article before it is published?",
@@ -95,7 +95,7 @@ const faqs = [
   },
   {
     q: "How do I get started?",
-    a: "Head to the Contact page and fill out the short application form. Our editorial team will reach out to you to talk through the next steps.",
+    a: "Head to the Contact page and request your free draft. Our editorial team will take it from there and send your draft for review.",
   },
 ];
 

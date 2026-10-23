@@ -18,9 +18,9 @@ function About() {
           <p>
             We help authors gain visibility, authority, and credibility by
             turning their personal journeys into professionally written
-            editorial features, published through recognized media platforms. We
-            don't just interview authors, we help the world understand why their
-            story matters.
+            editorial features, published through recognized media platforms.
+            platforms. We don't just write about authors, we help the world
+            understand why their story matters.
           </p>
         </div>
 

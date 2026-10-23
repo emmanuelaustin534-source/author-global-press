@@ -6,21 +6,22 @@ function Terms() {
       <div className="container legal-body">
         <p className="legal-label">Legal</p>
         <h1>Terms of Service</h1>
-        <p className="legal-updated">Last updated: August 2026</p>
+        <p className="legal-updated">Last updated: October 2026</p>
 
         <h2>1. Overview</h2>
         <p>
-          By using this website or applying for our services, you agree to the
-          terms outlined below. Author Global Press provides editorial interview
-          and feature-writing services for authors, published through
+          By using this website or requesting a draft, you agree to the terms
+          outlined below. Author Global Press provides editorial feature-writing
+          and media syndication services for authors, published through
           third-party media platforms.
         </p>
 
         <h2>2. Services</h2>
         <p>
-          We offer a Live Interview or Written Interview format, from which we
-          produce a professionally written editorial feature. Features are sent
-          to the author for review and approval before publication.
+          We write a custom editorial feature about your book and send you the
+          draft to review at no cost. If you choose to proceed, you select one
+          of our syndication packages, and your feature is published after you
+          approve the article.
         </p>
 
         <h2>3. Publication</h2>
@@ -34,8 +35,8 @@ function Terms() {
         <h2>4. Author Responsibilities</h2>
         <p>
           You are responsible for the accuracy of the information you provide,
-          including details about your book and personal story. You confirm that
-          you have the right to share the information and materials you submit.
+          including details about your book. You confirm that you have the right
+          to share the information and materials you submit.
         </p>
 
         <h2>5. Intellectual Property</h2>
