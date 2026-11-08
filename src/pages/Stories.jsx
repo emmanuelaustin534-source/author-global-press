@@ -61,7 +61,11 @@ const stories = [
       "An Indianapolis author's debut book brings a humorous, honest lens to the everyday absurdities and pressures of the modern workplace.",
     link: "https://trans4mind.com/counterpoint/index-creativity-career/from-boardrooms-to-breakthroughs-julianna-newlandrsquos-humorous-blueprint-for-navigating-the-modern-workplace.html",
     source: "Trans4mind",
+    altLink:
+      "https://apnews.com/press-release/getnews/indianapolis-author-julianna-newland-explores-workplace-realities-in-debut-book-ee60e6bb57f12cb7f255c98918e0e32a",
+    altSource: "AP News",
   },
+
   {
     number: "07",
     category: "Poetry",
@@ -81,6 +85,29 @@ const stories = [
       "A polymathic thinker and Human Development Engineer distills decades of study into a framework of scales and levels for understanding behavior, relationships, and personal growth.",
     link: "https://usawire.com/septemics-personal-growth-guide/",
     source: "USA Wire",
+  },
+  {
+    number: "09",
+    category: "Thriller",
+    title: "The Hidden Side of Courage",
+    subtitle: "Deborah Riley-Magnus on The Hope Trigger",
+    excerpt:
+      "A former advertising executive and chef turns to speculative military suspense, following a rescue operative whose hardest mission tests his past and his grip on reality.",
+    link: "https://usawire.com/deborah-riley-magnus-hidden-side-of-courage-in-the-hope-trigger/",
+    source: "USA Wire",
+    altLink:
+      "https://timebusinessnews.com/deborah-riley-magnus-explores-the-hidden-side-of-courage-in-the-hope-trigger/",
+    altSource: "Time Business News",
+  },
+  {
+    number: "10",
+    category: "Audio & Film",
+    title: "An Audiobook Release and a 400-Episode Milestone",
+    subtitle: "Meosha Bean and M.V.B Films Productions",
+    excerpt:
+      "A filmmaker releases a seven-part audiobook on spiritual abuse and recovery as her podcast for creators passes 400 episodes.",
+    link: "https://www.einpresswire.com/article/944012515/m-v-b-films-productions-announces-new-audiobook-release-and-podcast-milestone",
+    source: "EIN Presswire",
   },
 ];
 
@@ -104,14 +131,26 @@ function Stories() {
               <p className="story-excerpt">
                 {story.excerpt} Distributed via {story.source}.
               </p>
-              <a
-                href={story.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="story-link"
-              >
-                Read on {story.source} →
-              </a>
+              <div className="story-links">
+                <a
+                  href={story.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="story-link"
+                >
+                  Read on {story.source} →
+                </a>
+                {story.altLink && (
+                  <a
+                    href={story.altLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="story-link story-link-alt"
+                  >
+                    Also on {story.altSource} →
+                  </a>
+                )}
+              </div>
             </article>
           ))}
         </div>

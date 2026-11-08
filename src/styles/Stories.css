@@ -80,3 +80,16 @@
 .story-link:hover {
   color: var(--color-blue-dark);
 }
+.story-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.story-link-alt {
+  color: var(--color-gray);
+}
+
+.story-link-alt:hover {
+  color: var(--color-blue);
+}
