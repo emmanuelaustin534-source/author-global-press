@@ -3,6 +3,7 @@ import "../styles/Stories.css";
 
 const stories = [
   {
+    photo: "/images/authors/Shafter Bailey.jpeg",
     number: "01",
     category: "Memoir",
     title: "From the Hills of Kentucky to the Written Word",
@@ -13,6 +14,7 @@ const stories = [
     source: "USA Wire",
   },
   {
+    photo: "/images/authors/Louise Dupont.jpeg",
     number: "02",
     category: "Spirituality",
     title: "Louise Dupont's Hidden Treasures",
@@ -23,6 +25,7 @@ const stories = [
     source: "USA Wire",
   },
   {
+    photo: "/images/authors/Sabine.jpeg",
     number: "03",
     category: "Wellness",
     title: "Curiosity as a Tool for Transformation",
@@ -33,6 +36,7 @@ const stories = [
     source: "USA Wire",
   },
   {
+    photo: "/images/authors/RM Howe's Azalea.jpeg",
     number: "04",
     category: "Fiction",
     title: "Sailing Into Cozy Mystery Excellence",
@@ -43,6 +47,7 @@ const stories = [
     source: "USA Wire",
   },
   {
+    photo: "/images/authors/Loxley John.jpeg",
     number: "05",
     category: "Leadership",
     title: "A Tactical Blueprint for Resilience",
@@ -53,6 +58,7 @@ const stories = [
     source: "USA Wire",
   },
   {
+    photo: "/images/authors/juliana newland.jpeg",
     number: "06",
     category: "Business",
     title: "From Boardrooms to Breakthroughs",
@@ -67,6 +73,7 @@ const stories = [
   },
 
   {
+    photo: "/images/authors/alan-altany.jpeg",
     number: "07",
     category: "Poetry",
     title: "The Poet Searching for the Sacred",
@@ -75,9 +82,9 @@ const stories = [
       "A scholar and poet turns decades of addiction, anxiety, recovery, and spiritual searching into a Christian poetry series exploring suffering, grace, and the presence of the sacred.",
     link: "https://usawire.com/alan-altany-the-poet-searching-for-the-sacred-through-faith-struggle-beauty-of-life/",
     source: "USA Wire",
-    photo: "/images/authors/alan-altany.jpg",
   },
   {
+    photo: "/images/authors/jim marshall.jpeg",
     number: "08",
     category: "Self-Help",
     title: "A New Way to Understand Human Behavior",
@@ -88,6 +95,7 @@ const stories = [
     source: "USA Wire",
   },
   {
+    photo: "/images/authors/Deborah Riley-Magnus.jpeg",
     number: "09",
     category: "Thriller",
     title: "The Hidden Side of Courage",
@@ -101,6 +109,7 @@ const stories = [
     altSource: "Time Business News",
   },
   {
+    photo: "/images/authors/Meosha Bean.jpeg",
     number: "10",
     category: "Audio & Film",
     title: "An Audiobook Release and a 400-Episode Milestone",

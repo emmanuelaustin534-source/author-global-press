@@ -287,6 +287,7 @@
 /* FAQ section */
 .faq {
   padding: 40px 0 100px;
+  margin-bottom: -80;
 }
 
 .faq-inner {
@@ -454,7 +455,7 @@
   );
   text-align: center;
   padding: 80px 0;
-  margin-bottom: -80px;
+  margin-bottom: -80;
 }
 
 .final-cta-label {
