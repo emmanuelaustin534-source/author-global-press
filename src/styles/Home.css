@@ -508,3 +508,131 @@
     font-size: 1.5rem;
   }
 }
+/* Featured authors */
+.featured {
+  padding: 70px 0 20px;
+  text-align: center;
+}
+
+.featured-label {
+  color: var(--color-blue);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.featured-heading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-black);
+  margin-bottom: 40px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  text-align: left;
+}
+
+.featured-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 14px 14px 18px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(13, 15, 20, 0.09);
+}
+
+.featured-photo,
+.featured-initials {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.featured-photo {
+  object-fit: cover;
+  object-position: top;
+  background-color: var(--color-offwhite);
+}
+
+.featured-initials {
+  background: linear-gradient(
+    135deg,
+    var(--color-blue),
+    var(--color-blue-dark)
+  );
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.featured-category {
+  color: var(--color-blue);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.featured-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--color-black);
+  margin-bottom: 6px;
+}
+
+.featured-headline {
+  color: var(--color-gray);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  margin-bottom: 12px;
+  flex-grow: 1;
+}
+
+.featured-source {
+  color: var(--color-blue);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.featured-more {
+  margin-top: 34px;
+  text-align: center;
+}
+
+.featured-more-link {
+  color: var(--color-blue);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .featured-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+
+  .featured-card {
+    flex: 0 0 220px;
+    scroll-snap-align: start;
+  }
+}

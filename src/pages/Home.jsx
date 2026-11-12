@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "../styles/Home.css";
+import { stories } from "../data/stories";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -100,6 +101,7 @@ const faqs = [
 ];
 
 function Home() {
+  const featuredStories = stories.filter((story) => story.featured);
   const statRefs = useRef([]);
   const cardRefs = useRef([]);
   const testimonialRefs = useRef([]);
@@ -276,6 +278,54 @@ function Home() {
         </div>
       </section>
 
+      <section className="featured">
+        <div className="container">
+          <p className="featured-label">Featured Authors</p>
+          <h2 className="featured-heading">Recently Published Features</h2>
+
+          <div className="featured-grid">
+            {featuredStories.map((story) => (
+              <a
+                href={story.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="featured-card"
+                key={story.number}
+              >
+                {story.photo ? (
+                  <img
+                    className="featured-photo"
+                    src={story.photo}
+                    alt={story.author}
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="featured-initials">
+                    {story.author
+                      .split(" ")
+                      .map((part) => part[0])
+                      .slice(0, 2)
+                      .join("")}
+                  </div>
+                )}
+                <p className="featured-category">{story.category}</p>
+                <h3 className="featured-name">{story.author}</h3>
+                <p className="featured-headline">{story.title}</p>
+                <span className="featured-source">
+                  Read on {story.source} →
+                </span>
+              </a>
+            ))}
+          </div>
+
+          <div className="featured-more">
+            <Link to="/stories" className="featured-more-link">
+              View all stories →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="testimonials">
         <div className="container">
           <p className="testimonials-label">What Authors Say</p>
@@ -336,7 +386,9 @@ function Home() {
             ))}
           </div>
         </div>
-              <section className="final-cta">
+      </section>
+
+      <section className="final-cta">
         <div className="container">
           <p className="final-cta-label">Free Draft</p>
           <h2>See your feature before you decide anything.</h2>
@@ -344,12 +396,12 @@ function Home() {
             Your draft is free, and you only choose a package once you have
             approved it.
           </p>
-          <Link to="/contact" className="final-cta-btn">Request Free Draft →</Link>
+          <Link to="/contact" className="final-cta-btn">
+            Request Free Draft →
+          </Link>
         </div>
-      </section>
       </section>
     </div>
   );
 }
-
 export default Home;
