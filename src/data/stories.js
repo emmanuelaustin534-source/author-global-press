@@ -76,6 +76,8 @@ export const stories = [
   {
     photo: "/images/authors/alan-altany.jpeg",
     number: "07",
+    author: "Alan Altany",
+    featured: true,
     category: "Poetry",
     title: "The Poet Searching for the Sacred",
     subtitle: "Alan Altany on Faith, Struggle, and Beauty",
@@ -87,6 +89,8 @@ export const stories = [
   {
     photo: "/images/authors/jim marshall.jpeg",
     number: "08",
+    author: "Jim Marshall",
+    featured: true,
     category: "Self-Help",
     title: "A New Way to Understand Human Behavior",
     subtitle: "Jim Marshall's Septemics",
@@ -98,6 +102,8 @@ export const stories = [
   {
     photo: "/images/authors/Deborah Riley-Magnus.jpeg",
     number: "09",
+    author: "Deborah Riley-Magnus",
+    featured: true,
     category: "Thriller",
     title: "The Hidden Side of Courage",
     subtitle: "Deborah Riley-Magnus on The Hope Trigger",
