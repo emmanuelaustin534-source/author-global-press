@@ -11,9 +11,9 @@ function Terms() {
         <h2>1. Overview</h2>
         <p>
           By using this website or requesting a draft, you agree to the terms
-          outlined below. Author Global Press provides editorial feature-writing
-          and media syndication services for authors, published through
-          third-party media platforms.
+          outlined below. LitWire Media provides editorial feature-writing and
+          media syndication services for authors, published through third-party
+          media platforms.
         </p>
 
         <h2>2. Services</h2>
@@ -27,9 +27,9 @@ function Terms() {
         <h2>3. Publication</h2>
         <p>
           Once approved, features are distributed through recognized media
-          platforms and wire services. Author Global Press does not guarantee
-          specific publication dates, search rankings, or ongoing availability
-          of third-party platforms.
+          platforms and wire services. LitWire Media does not guarantee specific
+          publication dates, search rankings, or ongoing availability of
+          third-party platforms.
         </p>
 
         <h2>4. Author Responsibilities</h2>
@@ -48,8 +48,8 @@ function Terms() {
 
         <h2>6. Limitation of Liability</h2>
         <p>
-          Author Global Press is not liable for outcomes related to third-party
-          media platforms, including changes to their policies, availability, or
+          LitWire Media is not liable for outcomes related to third-party media
+          platforms, including changes to their policies, availability, or
           search visibility.
         </p>
 

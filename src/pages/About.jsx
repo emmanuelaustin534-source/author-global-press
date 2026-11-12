@@ -8,9 +8,9 @@ function About() {
         <p className="about-label">About Us</p>
         <h1 className="about-heading">Every Story Deserves to Be Told Well.</h1>
         <p className="about-intro">
-          Author Global Press was founded on a simple belief: authors work hard
-          to write their books, but too few ever get the chance to tell the
-          story behind the story. We exist to close that gap.
+          LitWire Media was founded on a simple belief: authors work hard to
+          write their books, but too few ever get the chance to tell the story
+          behind the story. We exist to close that gap.
         </p>
 
         <div className="about-section">

@@ -50,7 +50,7 @@ const stats = [
 const testimonials = [
   {
     quote:
-      "Working with Author Global Press gave my book a level of credibility I couldn't have built on my own. The article read like a genuine feature from a real publication.",
+      "Working with LitWire Media gave my book a level of credibility I couldn't have built on my own. The article read like a genuine feature from a real publication.",
     name: "Elena Marsh",
     role: "Debut Novelist",
   },
@@ -70,7 +70,7 @@ const testimonials = [
 
 const faqs = [
   {
-    q: "What is Author Global Press?",
+    q: "What is LitWire Media?",
     a: "We are an editorial feature service for authors. We write a professional article about your book and your story, then publish it through recognized media platforms.",
   },
   {

@@ -117,7 +117,7 @@ function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          _subject: "New free draft request - Author Global Press",
+          _subject: "New free draft request - LitWire Media",
           name: values.name,
           email: values.email,
           book_title: values.book_title,

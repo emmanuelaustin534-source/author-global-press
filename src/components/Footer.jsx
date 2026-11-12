@@ -8,7 +8,7 @@ function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <p className="footer-logo">Author Global Press</p>
+          <p className="footer-logo">LitWire Media</p>
           <p className="footer-tagline">
             Turning author journeys into professionally written editorial
             features, published through recognized media platforms.
@@ -33,7 +33,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© {year} Author Global Press. All rights reserved.</p>
+        <p>© {year} LitWire Media. All rights reserved.</p>
       </div>
     </footer>
   );
