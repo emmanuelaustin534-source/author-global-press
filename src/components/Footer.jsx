@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { business, disclosure } from "../data/business";
 import "../styles/Footer.css";
 
 function Footer() {
@@ -13,6 +14,11 @@ function Footer() {
             Turning author journeys into professionally written editorial
             features, published through recognized media platforms.
           </p>
+          {business.email && (
+            <a href={"mailto:" + business.email} className="footer-email">
+              {business.email}
+            </a>
+          )}
         </div>
 
         <div className="footer-links">
@@ -26,13 +32,16 @@ function Footer() {
         </div>
 
         <div className="footer-links">
-          <h3>Legal</h3>
+          <h3>Trust &amp; Legal</h3>
+          <Link to="/business-details">Business Details</Link>
+          <Link to="/approval-policy">Approval Policy</Link>
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/terms">Terms of Service</Link>
         </div>
       </div>
 
       <div className="footer-bottom">
+        <p className="footer-disclosure">{disclosure}</p>
         <p>© {year} LitWire Media. All rights reserved.</p>
       </div>
     </footer>

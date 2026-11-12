@@ -13,7 +13,7 @@
 }
 
 .hero-tag {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--color-gold);
   font-weight: 700;
   letter-spacing: 1.5px;
   font-size: 0.85rem;
@@ -280,7 +280,7 @@
 }
 
 .hero .btn-primary:hover {
-  background-color: #e8eeff;
+  background-color: #eceaff;
   color: var(--color-blue-dark);
 }
 
@@ -328,7 +328,7 @@
 
 .faq-item.open {
   border-color: var(--color-blue);
-  box-shadow: 0 6px 24px rgba(41, 82, 227, 0.08);
+  box-shadow: 0 6px 24px rgba(75, 63, 224, 0.08);
 }
 
 .faq-question {
@@ -385,5 +385,125 @@
 
   .faq-answer {
     padding: 0 18px 20px;
+  }
+}
+/* Promise strip */
+.promises {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.promises-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.promise-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 30px 24px;
+  border-right: 1px solid var(--color-border);
+}
+
+.promise-item:last-child {
+  border-right: none;
+}
+
+.promise-number {
+  font-family: var(--font-heading);
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--color-blue);
+  line-height: 1;
+}
+
+.promise-title {
+  font-weight: 700;
+  color: var(--color-black);
+  font-size: 0.98rem;
+  margin-bottom: 4px;
+}
+
+.promise-text {
+  color: var(--color-gray);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 800px) {
+  .promises-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .promise-item {
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .promise-item:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Closing banner */
+.final-cta {
+  background: linear-gradient(
+    135deg,
+    var(--color-blue) 0%,
+    var(--color-blue-dark) 100%
+  );
+  text-align: center;
+  padding: 80px 0;
+  margin-bottom: -80px;
+}
+
+.final-cta-label {
+  color: var(--color-gold);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.final-cta h2 {
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  line-height: 1.25;
+  color: var(--color-white);
+  max-width: 680px;
+  margin: 0 auto 14px;
+}
+
+.final-cta-text {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 520px;
+  margin: 0 auto 30px;
+}
+
+.final-cta-btn {
+  display: inline-block;
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  font-weight: 700;
+  padding: 15px 34px;
+  border-radius: 30px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.final-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 600px) {
+  .final-cta {
+    padding: 56px 0;
+  }
+
+  .final-cta h2 {
+    font-size: 1.5rem;
   }
 }

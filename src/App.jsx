@@ -11,6 +11,8 @@ import Contact from "./pages/Contact";
 import SampleArticle from "./pages/SampleArticle";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import ApprovalPolicy from "./pages/ApprovalPolicy";
+import BusinessDetails from "./pages/BusinessDetails";
 
 function App() {
   const location = useLocation();
@@ -36,6 +38,8 @@ function App() {
             <Route path="/sample-article" element={<SampleArticle />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/approval-policy" element={<ApprovalPolicy />} />
+            <Route path="/business-details" element={<BusinessDetails />} />
           </Routes>
         </motion.div>
       </AnimatePresence>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { disclosure } from "../data/business";
 import "../styles/Services.css";
 
 const packages = [
@@ -89,6 +90,8 @@ function Services() {
             </div>
           ))}
         </div>
+
+        <p className="packages-disclosure">{disclosure}</p>
 
         <div className="services-cta">
           <h2>Not sure which package fits?</h2>

@@ -191,6 +191,40 @@ function Home() {
         </div>
       </section>
 
+      <section className="promises">
+        <div className="container promises-grid">
+          <div className="promise-item">
+            <span className="promise-number">01</span>
+            <div>
+              <p className="promise-title">Free to preview</p>
+              <p className="promise-text">
+                Your draft is written at no cost to you.
+              </p>
+            </div>
+          </div>
+          <div className="promise-item">
+            <span className="promise-number">02</span>
+            <div>
+              <p className="promise-title">
+                You approve before anything is published
+              </p>
+              <p className="promise-text">
+                Nothing goes live without your written approval.
+              </p>
+            </div>
+          </div>
+          <div className="promise-item">
+            <span className="promise-number">03</span>
+            <div>
+              <p className="promise-title">Pay only after approval</p>
+              <p className="promise-text">
+                Choose a package once you have approved the finished draft.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="why-us">
         <div className="container">
           <p className="why-us-label">Why Authors Choose Us</p>
@@ -302,6 +336,17 @@ function Home() {
             ))}
           </div>
         </div>
+              <section className="final-cta">
+        <div className="container">
+          <p className="final-cta-label">Free Draft</p>
+          <h2>See your feature before you decide anything.</h2>
+          <p className="final-cta-text">
+            Your draft is free, and you only choose a package once you have
+            approved it.
+          </p>
+          <Link to="/contact" className="final-cta-btn">Request Free Draft →</Link>
+        </div>
+      </section>
       </section>
     </div>
   );

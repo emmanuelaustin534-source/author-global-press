@@ -1,11 +1,12 @@
 :root {
   --color-white: #ffffff;
-  --color-offwhite: #f7f9fb;
-  --color-blue: #2952e3;
-  --color-blue-dark: #1c3aad;
-  --color-black: #0d0f14;
-  --color-gray: #5a6472;
-  --color-border: #e3e7ee;
+  --color-offwhite: #f4f3ff;
+  --color-blue: #4b3fe0;
+  --color-blue-dark: #2a1f9e;
+  --color-black: #0b1020;
+  --color-gold: #e3b04b;
+  --color-gray: #5b5f77;
+  --color-border: #e4e2f5;
 
   --font-heading: "Georgia", "Times New Roman", serif;
   --font-body: "Segoe UI", Arial, sans-serif;

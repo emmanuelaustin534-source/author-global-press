@@ -7,7 +7,7 @@
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
   gap: 40px;
   padding-bottom: 50px;
 }
@@ -31,12 +31,8 @@
   gap: 12px;
 }
 
-.footer-links h3 {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #a9afba;
-  margin-bottom: 6px;
+.footer-links a:hover {
+  color: var(--color-gold);
 }
 
 .footer-links a {
@@ -66,4 +62,20 @@
   .footer-inner {
     grid-template-columns: 1fr;
   }
+}
+.footer-email {
+  display: inline-block;
+  margin-top: 16px;
+  color: var(--color-gold);
+  font-size: 0.9rem;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}
+
+.footer-disclosure {
+  max-width: 720px;
+  margin: 0 auto 8px;
+  padding: 0 24px;
 }

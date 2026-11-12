@@ -75,6 +75,7 @@ const stories = [
       "A scholar and poet turns decades of addiction, anxiety, recovery, and spiritual searching into a Christian poetry series exploring suffering, grace, and the presence of the sacred.",
     link: "https://usawire.com/alan-altany-the-poet-searching-for-the-sacred-through-faith-struggle-beauty-of-life/",
     source: "USA Wire",
+    photo: "/images/authors/alan-altany.jpg",
   },
   {
     number: "08",
@@ -124,32 +125,44 @@ function Stories() {
         <div className="stories-list">
           {stories.map((story) => (
             <article className="story-card" key={story.number}>
-              <p className="story-number">{story.number}</p>
-              <p className="story-category">{story.category}</p>
-              <h2 className="story-title">{story.title}</h2>
-              <h3 className="story-subtitle">{story.subtitle}</h3>
-              <p className="story-excerpt">
-                {story.excerpt} Distributed via {story.source}.
-              </p>
-              <div className="story-links">
-                <a
-                  href={story.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="story-link"
-                >
-                  Read on {story.source} →
-                </a>
-                {story.altLink && (
+              {story.photo && (
+                <img
+                  className="story-photo"
+                  src={story.photo}
+                  alt={story.subtitle}
+                  loading="lazy"
+                />
+              )}
+              <div className="story-body">
+                <p className="story-number">{story.number}</p>
+                <p className="story-category">{story.category}</p>
+                <span className="story-badge">
+                  Published via {story.source}
+                  {story.altSource ? " and " + story.altSource : ""}
+                </span>
+                <h2 className="story-title">{story.title}</h2>
+                <h3 className="story-subtitle">{story.subtitle}</h3>
+                <p className="story-excerpt">{story.excerpt}</p>
+                <div className="story-links">
                   <a
-                    href={story.altLink}
+                    href={story.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="story-link story-link-alt"
+                    className="story-link"
                   >
-                    Also on {story.altSource} →
+                    Read on {story.source} →
                   </a>
-                )}
+                  {story.altLink && (
+                    <a
+                      href={story.altLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="story-link story-link-alt"
+                    >
+                      Also on {story.altSource} →
+                    </a>
+                  )}
+                </div>
               </div>
             </article>
           ))}
