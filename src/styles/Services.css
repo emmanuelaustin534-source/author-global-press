@@ -64,7 +64,7 @@
   top: -14px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--color-gold);
+  background-color: var(--color-accent);
   color: var(--color-black);
   font-size: 0.75rem;
   font-weight: 700;

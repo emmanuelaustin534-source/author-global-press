@@ -1,6 +1,6 @@
 .navbar {
-  border-bottom: 1px solid var(--color-border);
   background-color: var(--color-white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -12,11 +12,11 @@
 }
 
 .navbar-glassy {
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(14px) saturate(160%);
-  -webkit-backdrop-filter: blur(14px) saturate(160%);
-  border-bottom: 1px solid rgba(227, 231, 238, 0.5);
-  box-shadow: 0 4px 24px rgba(13, 15, 20, 0.06);
+  background-color: rgba(237, 238, 241, 0.781);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.363);
 }
 
 .navbar-inner {
@@ -32,6 +32,7 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+  color: var(--color-blue);
 }
 
 .navbar-links {
@@ -43,23 +44,25 @@
 }
 
 .navbar-links a {
-  color: var(--color-black);
+  color: rgba(7, 7, 7, 0.88);
   transition: color 0.2s;
 }
 
 .navbar-links a:hover {
-  color: var(--color-blue);
+  color: var(--color-accent);
 }
 
 .navbar-cta {
-  background-color: var(--color-blue);
-  color: var(--color-white) !important;
+  background-color: var(--color-accent);
+  color: var(--color-black) !important;
   padding: 10px 22px;
   border-radius: 30px;
+  font-weight: 700;
 }
 
 .navbar-cta:hover {
-  background-color: var(--color-blue-dark) !important;
+  background-color: var(--color-accent-dark) !important;
+  color: var(--color-black) !important;
 }
 
 @media (max-width: 768px) {
@@ -77,7 +80,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .navbar-links.open {
@@ -87,11 +90,11 @@
   .navbar-links a {
     width: 100%;
     padding: 16px 24px;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .navbar-cta {
-    border-radius: 0;
+    border-radius: 20;
     text-align: center;
   }
 }

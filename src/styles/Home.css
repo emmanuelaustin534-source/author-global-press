@@ -13,7 +13,7 @@
 }
 
 .hero-tag {
-  color: var(--color-gold);
+  color: var(--color-accent);
   font-weight: 700;
   letter-spacing: 1.5px;
   font-size: 0.85rem;
@@ -459,7 +459,7 @@
 }
 
 .final-cta-label {
-  color: var(--color-gold);
+  color: var(--color-accent);
   font-weight: 700;
   letter-spacing: 1.5px;
   font-size: 0.85rem;
@@ -484,7 +484,7 @@
 
 .final-cta-btn {
   display: inline-block;
-  background-color: var(--color-gold);
+  background-color: var(--color-accent);
   color: var(--color-black);
   font-weight: 700;
   padding: 15px 34px;
